@@ -5,9 +5,12 @@ import { Models } from "imports/model.import";
 let token = localStorage.getItem("token")
 export const instance = () => {
     const data = axios.create({
-    baseURL: Functions.getBaseURL()+"/api/v1/",
+    baseURL: "https://6540e35c45bedb25bfc2d015.mockapi.io",
       headers: {
-        "authorization" :token || ""
+        "authorization" :token || "",
+        'x-apikey': '59a7ad19f5a9fa0808f11931',
+        'Access-Control-Allow-Origin' : '*',
+        'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
     },
   });
     data.interceptors.response.use(

@@ -1,0 +1,109 @@
+.product_container {
+    width: 70%;
+    margin: 50px auto;
+
+    .product_header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 12px;
+        margin: 15px 10px;
+
+        .search_header {
+            width: 300px;
+
+        }
+
+        .create_product {
+            display: flex;
+            gap: 10px;
+            width: 150px;
+            background: #000;
+            align-items: center;
+            border-radius: 12px;
+            justify-content: center;
+
+        }
+
+        .create_product_btn {
+            color: #fff;
+            font-weight: 900;
+        }
+    }
+
+    .categories {
+        display: flex;
+        gap: 4px;
+    }
+
+    .product_wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .product-card {
+
+            cursor: pointer;
+            width: 23%;
+            min-width: 250px;
+            padding: 10px 12px;
+            border-radius: 20px;
+            margin: 15px 10px;
+            transition: 1 ease;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+        }
+
+        .product-card:hover {
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.09);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            width: 226px;
+            height: 226px;
+        }
+
+        .desc {
+            padding: 10px;
+        }
+
+        .desc span {
+            color: gray;
+            font-size: 12px;
+            margin: 0 0 5px 0;
+        }
+
+        .desc h5 {
+            font-size: 16px;
+            color: #1a1a1a;
+            margin: 0 0 3px 0;
+        }
+
+        .desc i {
+            font-size: 20px;
+            color: #f8c600;
+            margin: 0 0 10px 0;
+        }
+
+        .desc h4 {
+            font-size: 20px;
+            color: #088178;
+            margin: 0 0 3px 0;
+        }
+
+
+        // .product-card .fa-cart-shopping {
+        //     font-size: 25px;
+        //     background: #088178;
+        //     color: #fff;
+        //     display: inline-block;
+        //     padding: 10px;
+        //     margin-right: 20px;
+        //     border-radius: 20px;
+        //     position: absolute;
+        //     right: 0;
+        //     bottom: 10px;
+        // }
+    }
+
+}

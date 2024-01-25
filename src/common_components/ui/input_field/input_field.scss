@@ -1,0 +1,53 @@
+@import '../../../index.scss';
+
+.input_container {
+  display: flex;
+  flex-direction: row;
+  background-color: #0000;
+  outline: 2px solid rgb(32 4 4 / 26%);
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 5px;
+  width: 100%;
+
+  .input {
+    // background-color: #0000;
+    // height: 50px;
+    border: 0px;
+    border-radius: 8px;
+    outline: 0px;
+    padding: 10px;
+    font-size: 14px;
+    // color: #0000;
+  }
+
+  .input_icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.focus {
+  outline: 2px solid #1d7bdf;
+}
+
+// .set_bg {
+//   background-color: #0000 !important;
+//   color: #0000 !important;
+//   font-weight: 600;
+// }
+
+.input_field_error {
+  margin-top: 10px;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 12px;
+  color: red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

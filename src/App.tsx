@@ -1,29 +1,32 @@
 import { Suspense } from "react";
 import "./App.scss";
-import Test from "./screens/test/test.screen";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Main from "./common_components/hoc/main.hoc";
-import store from "./store/store";
-import { Provider } from "react-redux";
-
+import { ToastContainer, toast } from "react-toastify";
+import ProductScreen from "screens/product_screen/product_screen.screen";
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
-    <Provider store={store}>
+    <div className="App">
       <BrowserRouter>
-        <Suspense fallback={<div />}>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Main>
-                  <Test />
-                </Main>
-              }
-            ></Route>
-          </Routes>
+      <Suspense fallback={<div />}>
+        <div className="navbar_container">{/* <Navbar /> */}</div>
+        <Routes>
+          <Route path="/" element={<ProductScreen />} />
+        </Routes>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         </Suspense>
       </BrowserRouter>
-    </Provider>
+    </div>
   );
 }
 export default App;

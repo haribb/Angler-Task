@@ -2,7 +2,7 @@ import _ from "lodash";
 import React from "react";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import toast, { Toaster } from 'react-hot-toast';
+import { toast } from 'react-toastify';
 import Compressor from 'compressorjs';
 
 export const getBaseURL = () => {
@@ -95,4 +95,29 @@ export const toastFailure = (failure: string) => {
   toast.error(failure, {
     id: "1",
   });
+};
+
+
+export const toastify = (text?: any) => {
+  toast(text, {
+    position: 'top-center',
+    // autoClose: 5000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+  });
+};
+
+export const toastifyError = (text?: any) => {
+  if (!_.isEmpty(text)) {
+    toast.error(text, {
+      position: 'top-center',
+      // autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
+  }
 };

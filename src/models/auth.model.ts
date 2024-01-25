@@ -3,7 +3,7 @@ import { instance } from "utils/axios.utils";
 const auth = {
   login: (data: any) => {
     let promise = new Promise((resolve, reject) => {
-      let url = "auth/user_login";
+      let url = "/user_login";
       instance()
         .post(url,data)
         .then((res) => {
@@ -25,6 +25,42 @@ const auth = {
       let url = "user/view/" + id;
       instance()
         .post(url)
+        .then((res) => {
+          resolve(res.data);
+        })
+        .catch((error) => {
+          if (error.response) {
+            reject(error.response.data.message);
+          } else {
+            reject(error);
+          }
+        });
+    });
+    return promise;
+  },
+  getManyUser: () => {
+    let promise = new Promise((resolve, reject) => {
+      let url = "user";
+      instance()
+        .get(url)
+        .then((res) => {
+          resolve(res.data);
+        })
+        .catch((error) => {
+          if (error.response) {
+            reject(error.response.data.message);
+          } else {
+            reject(error);
+          }
+        });
+    });
+    return promise;
+  },
+  updateUser: (data: any) => {
+    let promise = new Promise((resolve, reject) => {
+      let url = "user";
+      instance()
+        .post(url, data)
         .then((res) => {
           resolve(res.data);
         })

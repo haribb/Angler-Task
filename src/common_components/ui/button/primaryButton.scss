@@ -1,0 +1,79 @@
+@import '../../../index.scss';
+
+.button_wrapper {
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  color: white;
+  background: #000000;
+  // width: 100%;
+  padding: 10px 16px;
+  // min-width: 200px
+  // transition: 0.2s;
+}
+.primary_button_img {
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button_text {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+}
+.button_wrapper:hover {
+  // background: $activeTabColor !important;
+  // color: $buttonTextColor !important;
+  cursor: pointer;
+  // transition: all 0.2s linear;
+}
+// .disabled {
+//   background: $inputBackground !important;
+//   color: $inputTextColor !important;
+//   text-align: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 16px;
+//   color: white;
+//   background: $primaryBtnColor;
+//   width: 100%;
+//   padding: 13px;
+// }
+.primary_button_right_img {
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.primary_btn_icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1520px) {
+  .button_text {
+    font-size: 12px;
+  }
+  // .button_wrapper {
+  //   padding: 13px;
+  // }
+}
+.loading_button_wrapper {
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  color: white;
+  // width: 100%;
+  padding: 10px 16px;
+  // min-width: 200px
+  // transition: 0.2s;
+}

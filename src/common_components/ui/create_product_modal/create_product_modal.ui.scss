@@ -1,0 +1,76 @@
+@import '../../../index.scss';
+
+.invite_agency_container {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 400px;
+  border-radius: 16px;
+
+  .invite_wrapper {
+    padding: 20px;
+    width: 100%;
+    border-radius: 24px;
+
+    .invite_header {
+      display: flex;
+      justify-content: space-between;
+
+      .invite_heading {
+        font-family: 'Poppins';
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0px;
+        padding-bottom: 20px;
+      }
+    }
+
+    .invite_subheading {
+      font-family: 'Inter';
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 18px;
+      letter-spacing: 0px;
+      text-align: left;
+      padding-bottom: 10px;
+    }
+
+    .send_button {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      padding-top: 30px;
+    }
+    .required_field{
+      color: red;
+    }
+    .image_uploader{
+      width: 130px;
+      cursor: pointer;
+     margin: auto;
+    }
+    .image_uploader img{
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+    }
+  }
+
+  .wrapper_field {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.invite_wrapper .react-responsive-modal-modal {
+  border-radius: 16px;
+  width: auto !important;
+}
+
+.customModalAgency {
+  height: 700px;
+  border-radius: 16px;
+}
