@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import ProductScreen from "screens/product_screen/product_screen.screen";
 import 'react-toastify/dist/ReactToastify.css';
 function App() {

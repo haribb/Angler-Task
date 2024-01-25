@@ -1,5 +1,4 @@
 import "./product_screen.screen.scss";
-import { useQueryClient } from "@tanstack/react-query";
 // import { Models } from "imports/model.import";
 import productAllData from "../../Json/products.json";
 

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useImperativeHandle } from "react";
-import { useSelector } from "react-redux";
+import { useEffect,  } from "react";
+
 import { useSetState } from "utils/functions.utils";
 import "../input_field/input_field.scss";
 

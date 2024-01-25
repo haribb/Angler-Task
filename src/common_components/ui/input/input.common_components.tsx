@@ -1,5 +1,5 @@
 import "./input.common_components.scss";
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useState } from "react";
 import { Controller } from "react-hook-form";
 import _ from "lodash";
 
@@ -31,6 +31,7 @@ const InputComponent = (props: IInputComponent) => {
             >
               <div className="input_field_wrapper">
                 <input
+                autoFocus={focus}
                   value={value}
                   onChange={onChange}
                   name={props.name}

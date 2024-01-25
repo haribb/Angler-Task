@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { useSetState } from "utils/functions.utils";
 import "./text_area.scss";
 
@@ -11,8 +11,7 @@ const TextArea = (props: any) => {
 
   // Network req
 
-  //Logic
-  const testLogic = () => {};
+
 
   //sample_data
 

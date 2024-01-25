@@ -1,5 +1,4 @@
 import axios from "axios"
-import { Functions } from "./imports.utils"
 import { Models } from "imports/model.import";
 
 let token = localStorage.getItem("token")

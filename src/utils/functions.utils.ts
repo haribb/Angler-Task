@@ -85,17 +85,17 @@ export const compressImage = function (file: any) {
   });
 };
 
-export const toastSuccess = (success: string) => {
-  toast.success(success, {
-    id: "1",
-  });
-};
+// export const toastSuccess = (success: string) => {
+//   toast.success(success, {
+//     id: "1",
+//   });
+// };
 
-export const toastFailure = (failure: string) => {
-  toast.error(failure, {
-    id: "1",
-  });
-};
+// export const toastFailure = (failure: string) => {
+//   toast.error(failure, {
+//     id: "1",
+//   });
+// };
 
 
 export const toastify = (text?: any) => {

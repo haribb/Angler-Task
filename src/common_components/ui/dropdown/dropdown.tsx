@@ -1,24 +1,23 @@
-import React, { useEffect, useRef } from 'react';
-import { useSetState } from 'utils/functions.utils';
+import  { useEffect, useRef } from 'react';
 import './dropdown.scss';
 
 import Select from 'react-select';
 import Assets from 'imports/asset.import';
 
-interface IDropdownProps {
-  text?: String;
-  data: any;
-  setActive?: any;
-  disabled?: boolean;
-}
+// interface IDropdownProps {
+//   text?: String;
+//   data: any;
+//   setActive?: any;
+//   disabled?: boolean;
+// }
 
 const InputDropdown = (props: any) => {
   let { agency } = props;
   // State
-  const [state, setState] = useSetState({
-    isOpen: false,
-    active: '',
-  });
+  // const [state, setState] = useSetState({
+  //   isOpen: false,
+  //   active: '',
+  // });
 
   const dropdownRef: any = useRef();
 
@@ -28,15 +27,15 @@ const InputDropdown = (props: any) => {
   }, []);
 
   //Logic
-  const handleChange = () => {
-    setState({ isOpen: !state.isOpen });
-  };
-  const setActive = (value) => {
-    setState({ active: value, isOpen: !state.isOpen });
-    props?.setActive(value);
-  };
+  // const handleChange = () => {
+  //   setState({ isOpen: !state.isOpen });
+  // };
+  // const setActive = (value) => {
+  //   setState({ active: value, isOpen: !state.isOpen });
+  //   props?.setActive(value);
+  // };
   const customStyles: any = {
-    multiValueRemove: (provided, state) => ({
+    multiValueRemove: (provided:any,) => ({
       ...provided,
       '&:hover': {
         backgroundColor: 'transparent',
@@ -45,14 +44,14 @@ const InputDropdown = (props: any) => {
     }),
   };
 
-  const DropdownIndicator = (props) => {
+  const DropdownIndicator = () => {
     return (
       <div style={{ paddingRight: '10px' }}>
         <img src={Assets.arrow} height={10} width={10} />
       </div>
     );
   };
-  const ClearIndicator = (props) => {
+  const ClearIndicator = (props:any) => {
     if (agency) {
       return null;
     } else {
@@ -112,7 +111,7 @@ const InputDropdown = (props: any) => {
               : 'dropdown_single_value',
           valueContainer: (state) =>
             state.isDisabled ? 'dropdown_input_value' : 'dropdown_input_value',
-          menuList: (state) => (props ? props.menuListClassName : ''),
+          menuList: () => (props ? props.menuListClassName : ''),
         }}
         {...props}
       />

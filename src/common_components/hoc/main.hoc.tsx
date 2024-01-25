@@ -14,13 +14,13 @@ export default function Main(props: any) {
     // socket = connectSocket();
   }, []);
 
-  const showSuccess = (text: string) => {
-    //show snack success
-  }
+  // const showSuccess = (text: string) => {
+  //   //show snack success
+  // }
 
-  const throwError = (text: string) => {
-    //show snack error
-  }
+  // const throwError = (text: string) => {
+  //   //show snack error
+  // }
 
   const setMainLoading = (loading: boolean) => {
     setState({ loading: loading })
@@ -31,8 +31,8 @@ export default function Main(props: any) {
       if (child) {
         return React.cloneElement(child, {
           user,
-          showSuccess,
-          throwError,
+          // showSuccess,
+          // throwError,
           socket,
           setMainLoading
         });

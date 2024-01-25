@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useImperativeHandle, forwardRef } from "react";
+import  { useEffect, useRef, useImperativeHandle, forwardRef } from "react";
 
-import { toastify, toastifyError, useQuery, useSetState } from "utils/functions.utils";
+import { toastify, toastifyError,  useSetState } from "utils/functions.utils";
 import { DropDown, Input, PrimaryButton, TextArea, Validations } from "utils/imports.utils";
 
 import { Modal } from "react-responsive-modal";
@@ -14,8 +14,8 @@ const InviteModal = forwardRef((props: any, ref) => {
   // Reference
   const modalRef: any = useRef();
   const inputRef: any = useRef(null);
-  let query = useQuery();
-  let req_id = query.get("req_id");
+  // let query = useQuery();
+  // let req_id = query.get("req_id");
   //Redux
   // State
   const [state, setState] = useSetState({
@@ -32,7 +32,6 @@ const InviteModal = forwardRef((props: any, ref) => {
     urlPresent: false,
   });
 
-  const createProductSubmit = () => {};
   const cloundinaryUpload = () => {
     const data = new FormData();
     data.append("file", inputRef.current || "");
