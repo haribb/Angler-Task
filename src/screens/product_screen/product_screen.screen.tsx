@@ -40,6 +40,7 @@ const ProductScreen = () => {
           <Input
             onChange={(search_value: string) => {
               debounced(search_value);
+              setState({search_value: search_value})
             }}
             type="text"
             // value={state.search_value}
@@ -82,7 +83,7 @@ const ProductScreen = () => {
         productData={ProductCheck}
         onClick={(e: Record<string, any>) => {
           setState({ productData: [...state.productData, e], productOriginal: [...state.productOriginal, e] });
-          filterProduct(state.search_value);
+          
         }}
       />
     </div>
