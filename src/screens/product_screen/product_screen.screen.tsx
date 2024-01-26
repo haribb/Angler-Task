@@ -26,12 +26,11 @@ const ProductScreen = () => {
     filterProduct(search_value);
   }, 500);
   const filterProduct = (search: string) => {
-    let filterData = state.productOriginal.filter((product: any) =>{
-      let name=product.name.toLowerCase();
-     return name.includes(search.toLowerCase())} );
-    
-    setState({ productData: !_.isEmpty(search)?filterData: state.productOriginal});
-
+    let filterData = state.productOriginal.filter((product: any) => {
+      let name = product.name.toLowerCase();
+      return name.includes(search.toLowerCase());
+    });
+    setState({ productData: !_.isEmpty(search) ? filterData : state.productOriginal });
   };
 
   return (
@@ -82,9 +81,8 @@ const ProductScreen = () => {
         ref={modalRef}
         productData={ProductCheck}
         onClick={(e: Record<string, any>) => {
-          console.log("check",e);
-
-          setState({ productData: [...state.productData, e] ,productOriginal:[...state.productOriginal, e] });
+          setState({ productData: [...state.productData, e], productOriginal: [...state.productOriginal, e] });
+          filterProduct(state.search_value);
         }}
       />
     </div>
