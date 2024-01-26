@@ -1,6 +1,6 @@
-import  { useEffect, useRef, useImperativeHandle, forwardRef } from "react";
+import { useEffect, useRef, useImperativeHandle, forwardRef } from "react";
 
-import { toastify, toastifyError,  useSetState } from "utils/functions.utils";
+import { toastify, toastifyError, useSetState } from "utils/functions.utils";
 import { DropDown, Input, PrimaryButton, TextArea, Validations } from "utils/imports.utils";
 
 import { Modal } from "react-responsive-modal";
@@ -50,8 +50,13 @@ const InviteModal = forwardRef((props: any, ref) => {
       });
   };
   const imageUploader = (e: any) => {
+    
+    if (e.target.files[0].size >= 3000000) {
+      return toastifyError("Maximum size is 3MB");
+    }
     setState({ image: e.target.files[0] });
     inputRef.current = e.target.files[0];
+    
     cloundinaryUpload();
   };
   // useEffect(() => {}, [state.url, state]);
