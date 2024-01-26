@@ -83,7 +83,7 @@ const ProductScreen = () => {
         productData={ProductCheck}
         onClick={(e: Record<string, any>) => {
           setState({ productData: [...state.productData, e], productOriginal: [...state.productOriginal, e] });
-          filterProduct(state.searc_value)
+          filterProduct(state.search_value)
         }}
       />
     </div>
