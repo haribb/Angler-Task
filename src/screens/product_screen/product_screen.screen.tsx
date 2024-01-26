@@ -5,7 +5,7 @@ import productAllData from "../../Json/products.json";
 import { useSetState } from "../../utils/functions.utils";
 import { CreateProductModal, Input } from "utils/imports.utils";
 import Assets from "imports/asset.import";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import _ from "lodash";
 const ProductScreen = () => {
@@ -33,6 +33,10 @@ const ProductScreen = () => {
     setState({ productData: !_.isEmpty(search) ? filterData : state.productOriginal });
   };
 
+  useEffect(() => {
+    filterProduct(state.search_value);
+  }, [state.productOriginal]);
+
   return (
     <div className="product_container">
       <div className="product_header">
@@ -40,7 +44,7 @@ const ProductScreen = () => {
           <Input
             onChange={(search_value: string) => {
               debounced(search_value);
-              setState({search_value: search_value})
+              setState({ search_value: search_value });
             }}
             type="text"
             // value={state.search_value}
@@ -83,7 +87,6 @@ const ProductScreen = () => {
         productData={ProductCheck}
         onClick={(e: Record<string, any>) => {
           setState({ productData: [...state.productData, e], productOriginal: [...state.productOriginal, e] });
-          filterProduct(state.search_value)
         }}
       />
     </div>
