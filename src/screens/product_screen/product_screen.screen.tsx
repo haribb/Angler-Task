@@ -28,8 +28,7 @@ const ProductScreen = () => {
   const filterProduct = (search: string) => {
     let filterData = state.productOriginal.filter((product: any) =>{
       let name=product.name.toLowerCase();
-     return name.includes(search)} );
-    console.log('filterData',filterData);
+     return name.includes(search.toLowerCase())} );
     
     setState({ productData: !_.isEmpty(search)?filterData: state.productOriginal});
 
